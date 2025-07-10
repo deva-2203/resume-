@@ -1,0 +1,13 @@
+# Dependency directories
+node_modules/
+
+# Environment variables
+.env
+
+# Build output
+.next
+out
+
+# Local development
+.vercel
+*.log

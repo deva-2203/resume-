@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "*.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "*.{jpg,css}",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    { "src": "/hobbies1", "dest": "/hobbies1.html" },
+    { "src": "/contact1", "dest": "/contact1.html" },
+    { "src": "/(.*)", "dest": "/index.html" }
+  ]
+}
