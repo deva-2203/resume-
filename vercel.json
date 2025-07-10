@@ -2,21 +2,13 @@
   "version": 2,
   "builds": [
     {
-      "src": "**/*.+(html|css|jpg|jpeg|png|gif|svg)",
-      "use": "@vercel/static"
+      "src": "**/*.html",
+      "use": "@vercel/static-html"
     }
   ],
   "routes": [
     { "src": "/hobbies1", "dest": "/hobbies1.html" },
     { "src": "/contact1", "dest": "/contact1.html" },
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
-    },
-    {
-      "src": "/(.*\\.(?:css|jpg|jpeg|png|gif|svg))",
-      "headers": { "cache-control": "public, max-age=31536000, immutable" },
-      "continue": true
-    }
+    { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
